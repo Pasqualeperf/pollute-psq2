@@ -51,7 +51,6 @@ if (window.navigator.geolocation) {
             }
             geoLocationInfo.appendChild(currentPolluteValue);
             geoLocationInfo.appendChild(valueDescr);
-            console.log(data);
         })
     }, () => {
         loader.style.display = "none"; 
@@ -69,12 +68,10 @@ cityForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let keyword = cityForm.city.value.toLowerCase();
     const searchEndPoint = `search/?keyword=${keyword}&token=${process.env.API_TOKEN}`;
-    console.log(process.env.API_URL+searchEndPoint);
     fetch(process.env.API_URL+searchEndPoint).then(response => response.json()).then(data => {
         const result = document.querySelector("#result");
         let aqiSum = 0;
         data.data.forEach(element => {
-            console.log(typeof element.aqi);
             if (element.aqi != '-' && typeof element.aqi === "string" ) {
                 let toNum = parseInt(element.aqi);
                 aqiSum += toNum;
@@ -100,14 +97,11 @@ cityForm.addEventListener('submit', (e) => {
             result.innerText = 'No info about this place. Make sure you have insert a valid place.'    
         }
         else {
-            result.innerText = `The average air quality in ${cityForm.city.value} zone is ${average}, the air quality is ${good ? "good" : medium ? "medium" : "unhealty"}`;
+            result.innerText = `The average air quality in ${cityForm.city.value.toUpperCase()} zone is ${average}, the air quality is ${good ? "good" : medium ? "medium" : "unhealty"}`;
         }
     });
 })
 
-
-
-console.log('synchronous');
    
 
 
