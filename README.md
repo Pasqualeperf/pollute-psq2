@@ -13,7 +13,7 @@ To know Aqi of you location give consent to geo-loclization and wait the respons
 
 ## Deployed on Netlify
 
-
+https://pollute-psq2.netlify.app/
 
 ## License 
 
