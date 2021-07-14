@@ -1,0 +1,25 @@
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    html, body {
+  
+        main {
+    
+            #content {
+    
+                h1 {
+                    text-align: center;
+                    font-size: 32px;
+                }
+    
+                .green{
+                    font-size: 22px;
+                }
+                .orange{
+                    font-size: 22px;
+                }
+                .red{
+                    font-size: 22px;
+                }
+            }
+        }   
+    }
+}

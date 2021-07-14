@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollute check Psq2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="content">
+            <h1>Check Pollution level</h1>
+            <div id="loader"></div>
+            <div id="geoLocationInfo"></div>
+            <h2>Insert the city that you want to check:</h2>
+            <form name="foundCity">
+                <input type="text" name="city" placeholder="Milan">
+                <input type="submit" value="Send request">
+            </form>
+            <div id="searchResult">
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./dist/main.js"></script>
+</html>
